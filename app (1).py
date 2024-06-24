@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1f1MyJsKro8LBEtVc6wNM1w1Lub5jd-IE
 """
 
-!pip install streamlit
+
 import streamlit as st
 import pickle
 import numpy as np
 
-model = pickle.load(open('/content/best model.pkl', 'rb'))
+model = pickle.load(open('best model.pkl', 'rb'))
 
 
 def predict_strength(cement, slag, ash, water, superplastic, coarseagg, fineagg, age):
@@ -25,7 +25,7 @@ def predict_strength(cement, slag, ash, water, superplastic, coarseagg, fineagg,
 def main():
     st.title("")
     html_temp = """
-    st.image("/content/cement.jpg", caption='Concrete Strength Prediction', use_column_width=True)
+    st.image("cement.jpg", caption='Concrete Strength Prediction', use_column_width=True)
     <div style="background-color:#0E0E0F ;padding:10px">
     <h1 style="color:black;text-align:center;">Neon Tech</h1>
     <div style="background-color:#0E0E0F ;padding:10px">
