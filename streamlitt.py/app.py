@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model = pickle.load(open('model/best_model (1).pkl', 'rb'))
+model = pickle.load(open('model/best_model (1).pkl', 'wb'))
 
 
 def predict_strength(cement, slag, ash, water, superplastic, coarseagg, fineagg, age):
